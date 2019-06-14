@@ -1,0 +1,18 @@
+dubbo:
+  application:
+    name:  service-consumer #服务名称
+  registry:
+    address: zookeeper://192.168.79.129:2182 #zookeeper注册中心
+    # 读者请换成自己的zookeeperip
+    protocol:
+      name: dubbo
+      port: 20880
+    check: false
+  monitor:
+    protocol: register
+  consumer:
+    check:  false
+    timeout: 3000 #服务调用超时时间
+
+server:
+  port: 8062
